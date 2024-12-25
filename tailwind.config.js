@@ -4,6 +4,11 @@ export default {
   theme: {
     extend: {},
   },
-  // eslint-disable-next-line no-undef
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
-}
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('daisyui'),
+  ],
+  daisyui: {
+    themes: ['winter', 'dracula', 'autumn', 'wireframe'],
+  },
+};
