@@ -47,3 +47,19 @@ const Form = ({label,name,type,defaultValue}) => {
 };
 
 export default Form;
+########################
+slider
+const hero=[{id:1,name:'harryimg'}]
+<div className="grid lg:grid-cols-2 gap-24 items-center">
+  <div>info</div>
+  <div className="hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-neutral rounded-box">
+{hero.map((item)=>{
+return (
+  <div key={item.id} className="carousel-item">
+<img src={item.name} alt="item" className="rounded-box h-full w-80 object-cover" />
+  </div>
+)
+})}
+
+  </div>
+</div>
