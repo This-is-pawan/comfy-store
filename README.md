@@ -76,6 +76,46 @@ const params = new URLSearchParams(url.search);
 
 console.log(params);
 ```
+#use loder
+```js
+import { createBrowserRouter, RouterProvider, Route, useLoaderData } from "react-router-dom";
+
+// Loader function to fetch user data
+const userLoader = async () => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
+  if (!response.ok) {
+    throw new Error("Failed to load data");
+  }
+  return response.json();
+};
+
+// Component using useLoaderData
+const UserProfile = () => {
+  const user = useLoaderData(); // Get loaded data
+  return (
+    <div>
+      <h2>{user.name}</h2>
+      <p>Email: {user.email}</p>
+    </div>
+  );
+};
+
+// Define routes
+const router = createBrowserRouter([
+  {
+    path: "/user",
+    element: <UserProfile />,
+    loader: userLoader, // Attach loader to route
+  },
+]);
+
+function App() {
+  return <RouterProvider router={router} />;
+}
+
+export default App;
+
+```
 
 
 
