@@ -63,3 +63,13 @@ return (
 
   </div>
 </div>
+
+```js
+
+const data = { url: "https://example.com?name=John&age=25&city=Delhi" };
+const queryParams = Object.fromEntries([...new URL(data.url).searchParams.entries()]);
+console.log(queryParams);
+```
+
+
+
