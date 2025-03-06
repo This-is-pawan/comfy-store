@@ -68,7 +68,13 @@ return (
 
 const data = { url: "https://example.com?name=John&age=25&city=Delhi" };
 const queryParams = Object.fromEntries([...new URL(data.url).searchParams.entries()]);
+
 console.log(queryParams);
+const url = new URL("https://example.com/search?query=javascript&sort=asc&page=2");
+
+const params = new URLSearchParams(url.search);
+
+console.log(params);
 ```
 
 
