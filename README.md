@@ -96,6 +96,7 @@ const UserProfile = () => {
     <div>
       <h2>{user.name}</h2>
       <p>Email: {user.email}</p>
+      <p>Email: {user.email}</p>//
     </div>
   );
 };
@@ -114,7 +115,7 @@ function App() {
 }
 
 export default App;
-
+ 
 ```
 
 
