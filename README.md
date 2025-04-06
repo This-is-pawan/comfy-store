@@ -118,5 +118,25 @@ export default App;
  
 ```
 
+```js
 
+const express = require("express");
+const router = express.Router();
+const { getAllTasks ,createTask,getTask,updateTask,deleteTask} = require("../controllers/tasks");
+
+
+
+
+router.route("/").get(getAllTasks);
+router.route('/:id').get.patch(updateTask).delete(deleteTask)
+module.exports = router;
+
+
+
+
+
+
+
+
+```
 
