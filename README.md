@@ -1,5 +1,5 @@
 
- NOTE:- some work is pending....
+```js  NOTE:- some work is pending....
 import React, { useState } from "react";
 import Login from "../pages/Login";
 import { BsSunFill,BsMoonFill } from 'react-icons/bs';
@@ -38,7 +38,7 @@ const Form = ({label,name,type,defaultValue}) => {
     </>
   );
 };
-
+```
 export default Form;
 ########################
 slider
