@@ -6,7 +6,7 @@ import { BsSunFill,BsMoonFill } from 'react-icons/bs';
 const Form = ({label,name,type,defaultValue}) => {
   const [user,setUser]=useState(false)
   const handle=()=>{
-    setUser(!user)
+    setUser(!user) 
   }
   return (
     <>
